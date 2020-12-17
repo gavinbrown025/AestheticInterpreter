@@ -1,0 +1,302 @@
+
+body { 
+	width:100%;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+}
+
+svg {
+	width: 100%;
+}
+
+a {text-decoration: none;}
+
+p {
+	font-family: 'Tahoma', Arial, sans-serif;
+	font-weight: bold;
+	font-size: 32px;
+	text-transform: uppercase;
+	color: white;
+	text-shadow: 3px 3px 3px rgba(0,0,0, .5);
+}
+
+.hidden {display:none;}
+
+.background {
+	width: 100%;
+	height:100%;
+	background-image: url("../images/background.svg");
+	position: absolute;
+	background-position: bottom 0 right 0; 
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.wrapper {
+	width: 92%;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+/* =========Header=========*/
+
+.mainHeader {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+	align-items: flex-end;
+	justify-content: space-between;
+}
+
+#logo {
+	align-items: center;
+	width: 50%;
+}
+
+.vibeCheck {
+	background-color: rgba(0, 0, 0, 0.8);
+	border-radius: 10px;
+	padding: 10px;
+	width: 35%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.vibeCheck >.icon{
+	display: flex;
+	align-items: center;
+	background: transparent;
+	margin:0 auto;
+	height: 100px;
+	width: 100px;	
+}
+
+
+.vibeCheck p{
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	width: 100%;
+	margin-bottom: 10px;	
+}
+
+.divider {
+	width: 100%;
+	height: 10px;
+	background-color: #211830; 
+	opacity: 80%;
+}
+
+
+/* =========Drop Area=========*/
+
+.dropCon {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 100%;
+	height: 400px;
+	margin-bottom: 20px;
+}
+
+.mainMusic {
+	background: url(../images/mainBG.gif);
+	background-size: cover;
+	width: 45%;
+	height: 400px;
+	margin: 10px 0;
+	border-radius: 10px;
+	position: relative;
+	justify-content: flex-end;
+	display: flex;
+	flex-direction: column;
+}
+
+.overlay{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+}
+
+.controls {
+	background-color: #696969; 
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+  	border-radius: 0px 0px 10px 10px;
+	opacity: .9;
+}
+
+.controls img{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 5px;
+	width: 20px;
+}
+.controls img:hover{
+  	scale: 1.2;
+	cursor: pointer;
+}
+
+.squiggle{
+	transition: background .5s ease-in-out;
+	background-image: url(../images/squiggleBG.gif);
+	background-size: cover;
+	background-position: top;
+}
+
+.rain{
+	transition: background .5s ease-in-out;
+	background: url(../images/rainBG.gif);
+	background-size: cover;
+	background-position: center;
+}
+
+.sun{
+	transition: background .5s ease-in-out;
+	background-image: url(../images/waveBG.gif);
+	background-size: cover;
+	background-position: center;
+}
+
+.squiggle .overlay {
+	background-image: url(../images/vhsSmooth.gif);
+	opacity: .2;
+}
+
+.rain .overlay {
+	background-image: url(../images/vhsWobble.gif);
+	opacity: .4;
+}
+
+.sun .overlay {
+	background-image: url(../images/vhsStatic.gif);
+	opacity: .2;
+}
+
+.dropZone {
+	width: 52%;
+	height: 380px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.dropItem {
+	background-color: rgba(0, 0, 0, 0.8);/*cyan*/
+	width: 30%;
+	height: 190px;
+	margin: 10px 0;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: relative;
+}
+
+.dropItem img {
+	height: 100%;
+}
+
+.loading {
+	opacity: .8;
+	position: relative;
+}
+
+.loading p {
+	display: block;
+	position: absolute;
+	left: 14px;
+	color: pink;
+	text-align: center;
+	line-height: 14px;
+}
+
+.stop {
+	font-size: 48px;
+	color: #696969;
+	text-align: center;
+	position: absolute;
+	right: 10px;
+	top: -10px;
+	opacity: 0;
+
+}
+
+.dropItem:hover .stop {
+	cursor: pointer;
+	opacity: .6;
+}
+
+
+/* =========Gallery=========*/
+
+.info {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.gallery {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 0 0 -20px -20px;  
+}
+
+
+.icon {
+	background-color: rgba(0, 0, 0, 0.8);
+	margin: 0 0 20px 10px; 
+	width: 120px;
+	height: 120px;
+	text-align: center;
+	border-radius: 10px;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.icon img {
+	width: 100%;
+}
+
+.icon:hover {
+	cursor: pointer;
+}
+
+
+.mainFooter p{
+	margin: 20px 10px 8px 0;
+	font-weight: bold;
+	text-align: right;
+	color:#FF71CE;
+	font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
